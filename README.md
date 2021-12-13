@@ -1,7 +1,7 @@
 **INSTALL**
 -
 - cd project dir
-- https://github.com/Zsena/flower_website.git
+- git clone https://github.com/Zsena/flower_website.git
 - composer install
 - create .env from .env.example
 - set db
