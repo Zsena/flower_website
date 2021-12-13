@@ -2,14 +2,15 @@
 
     <div class="uk-container">
         <nav class="uk-navbar-transparent " data-uk-navbar>
+            <div class="uk-navbar-left uk-visible@s">
+                <a href="/"><img src="{{ url }}assets/img/svg/logo.svg"></a>
+            </div>
             <div class="uk-navbar-left">
-                <img src="{{ url }}assets/img/logo-200x200.png" style="height: 30px;">
-                <a class="uk-navbar-item uk-logo" href="{{ url }}"><span style="color: #fff">fragum.</span><strong style="color: #028174">tech</strong></a>
+                <a href="/"><img src="{{ url }}assets/img/svg/logo-mobile.svg"></a>
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-text-bold uk-visible@s">
-                    <li class="uk-active uk-visible@m"><a href="" data-uk-icon="home"></a></li>
-                    <li><a href="/">Start</a></li>
+                    <li class="uk-visible@m"><a href="/" data-uk-icon="home"></a></li>
                      <li><a href="/rolunk">Rólunk</a></li>
                     <li><a href="/szolgaltatasok">Szolgáltatások</a></li>
                     <li><a href="/kapcsolat">Árajánlat</a></li>
@@ -25,9 +26,9 @@
         <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
             <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
             <ul class="uk-nav uk-nav-default">
-                <li class="uk-nav-header">fragum.tech</li>
+                <li class="uk-nav-header"><a href="/"><img src="{{ url }}assets/img/svg/logo.svg"></a></li>
                 <li class="uk-nav-divider"></li>
-                <li><a href="/">Főoldal</a></li>
+                <li class=""><a href="/" data-uk-icon="home"></a></li>
                 <li><a href="/rolunk"> Rólunk</a></li>
                 <li><a href="/szolgaltatasok"> Szolgáltatások</a></li>
                 <li><a href="/kapcsolat">Árajánlat</a></li>
