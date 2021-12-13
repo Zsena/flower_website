@@ -1,7 +1,7 @@
 **INSTALL**
 -
 - cd project dir
-- git clone https://github.com/bakoadamm/fragum-framework.git . 
+- https://github.com/Zsena/flower_website.git
 - composer install
 - create .env from .env.example
 - set db
