@@ -50,6 +50,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <link rel="stylesheet" href="{{ url }}assets/css/uikit.css">
+    <link rel="stylesheet" href="{{ url }}assets/css/main.css">
     <style>
 
         #overlay {
@@ -98,9 +99,9 @@
 
 </head>
 <body>
-<div id="overlay">
+{# <div id="overlay">
     <div class="spinner"></div>
-</div>
+</div> #}
 
 {% include('@templates/fragments/menu.twig') %}
 
@@ -154,53 +155,9 @@
     </div>
 </footer>
 
-
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
 <script src="{{ url }}assets/js/uikit-icons.min.js"></script>
 <script src="{{ url }}assets/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
-<script>
-    const editor = new EditorJS({
-        /**
-         * Id of Element that should contain Editor instance
-         */
-        holder: 'editorjs',
-        tools: {
-            header: Header,
-            quote: Quote,
-        },
-
-    });
-
-    let saveBtn = document.getElementById('save');
-    saveBtn.addEventListener("click", function(event) {
-        editor.save().then((outputData) => {
-            fetch('/api/save', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(outputData),
-            });
-            console.log('Article data: ', outputData)
-        }).catch((error) => {
-            console.log('Saving failed: ', error)
-        });
-    })
-
-
-    document.addEventListener("DOMContentLoaded", function(event) {
-        var overlay = $('#overlay');
-        window.addEventListener('load', function() {
-            overlay.hide();
-        });
-    });
-</script>
+<script src="{{ url }}assets/js/main.js"></script>
 
 {% block js %}{% endblock %}
 </body>

@@ -14,7 +14,11 @@ $router->get('/', 'StartPageController@render');
 
 $router->get('/test/{slug}/{id}', 'TestController@testTwo');
 
-$router->get('/dokumentacio', 'DocumentationController@render');
+$router->get('/rolunk', 'PageController@renderAbout');
+
+$router->get('/szolgaltatasok', 'PageController@renderServices');
+
+$router->get('/kapcsolat', 'PageController@renderContact');
 
 $router->get('/blog/{id}', 'StartPageController@blog');
 
